@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <>
@@ -20,12 +22,12 @@ export default function Home() {
         The following pieces of functionality are exposed in this app:
         <ul className="list-disc list-inside">
           <li>
-            <a
+            <Link
               className="underline text-blue-500 hover:bg-blue-200 rounded-full transition duration-300"
-              href="/upload"
+              href="/upload-widget"
             >
               Upload (Upload Widget)
-            </a>
+            </Link>
             : shows an example implementation of the{' '}
             <a
               className="underline text-blue-500 hover:bg-blue-200 rounded-full transition duration-300"
@@ -36,12 +38,12 @@ export default function Home() {
             .
           </li>
           <li>
-            <a
+            <Link
               className="underline text-blue-500 hover:bg-blue-200 rounded-full transition duration-300"
-              href="/server-action-upload"
+              href="'/api-route-upload"
             >
-              Server Action Upload
-            </a>
+              API Route Upload
+            </Link>
             : shows an example of how to use the{' '}
             <a
               className="underline text-blue-500 hover:bg-blue-200 rounded-full transition duration-300"
@@ -49,7 +51,7 @@ export default function Home() {
             >
               Upload API
             </a>{' '}
-            via server actions in Next.js.
+            via API routes in Next.js.
           </li>
           <li>
             <a
