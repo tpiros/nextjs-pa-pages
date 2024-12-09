@@ -23,6 +23,7 @@ export default async function handler(
         req.on('error', (err) => reject(err));
       });
 
+      // using Cloudinary's upload_stream to upload (wrapped in a Promise)
       const result: UploadApiResponse = await new Promise((resolve, reject) => {
         cloudinary.uploader
           .upload_stream(

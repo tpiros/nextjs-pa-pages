@@ -1,5 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 
+// This example uses an API route to upload assets to Cloudinary
 export default function UploadForm() {
   const [image, setImage] = useState<File | null>(null);
   const [uploadButtonEnabled, setUploadButtonEnabled] = useState(false);
@@ -23,6 +24,7 @@ export default function UploadForm() {
     }
   };
 
+  // function to call on form submission
   async function uploadToServer(event: FormEvent) {
     event.preventDefault();
     if (!image) return;
